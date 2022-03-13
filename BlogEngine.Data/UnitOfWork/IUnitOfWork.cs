@@ -6,6 +6,7 @@ namespace BlogEngine.Data.UnitOfWork
     {
         IPostRepository Posts { get; }
         IAuthorRepository Authors { get; }
+        ICommentRepository Comments { get; }
         int Complete();
     }
 }

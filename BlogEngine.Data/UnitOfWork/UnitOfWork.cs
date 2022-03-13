@@ -13,11 +13,12 @@ namespace BlogEngine.Data.UnitOfWork
             _context = context;
             Posts = new PostRepository(_context);
             Authors = new AuthorRepository(_context);
+            Comments = new CommentRepository(_context);
         }
 
         public IPostRepository Posts { get; private set; }
         public IAuthorRepository Authors { get; private set; }
-
+        public ICommentRepository Comments { get; private set; }
 
         public int Complete()
         {
